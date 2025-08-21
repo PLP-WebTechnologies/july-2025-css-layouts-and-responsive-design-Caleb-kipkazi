@@ -1,0 +1,103 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation using Flexbox */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Layout using Grid */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Content + Sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Content Area */
+.content {
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Flexbox Cards inside Content */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ddd;
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #eee;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Stack content and sidebar */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Vertical nav menu */
+    text-align: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+}
